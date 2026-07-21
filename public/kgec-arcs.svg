@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" fill="none" role="img" aria-label="KGEC radiating energy arcs">
+  <g stroke="currentColor" stroke-width="30" stroke-linecap="round">
+    <path d="M159 269 A150 150 0 0 1 441 269" opacity="1"/>
+    <path d="M103 248 A210 210 0 0 1 497 248" opacity="0.85"/>
+    <path d="M46 228 A270 270 0 0 1 554 228" opacity="0.7"/>
+  </g>
+</svg>
