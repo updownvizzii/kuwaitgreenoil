@@ -79,32 +79,37 @@ export function Hero() {
               </FadeIn>
             </div>
 
-            {/* Right — services, right in the hero */}
-            <FadeIn delay={1000} duration={1000} className="mt-8 lg:mt-0">
-              <div className="liquid-glass border rounded-xl overflow-hidden" style={{ borderColor: 'rgba(224,191,120,0.35)' }}>
-                {SERVICES.map((s, i) => (
-                  <Link
-                    key={s.id}
-                    to={`/services/${s.id}`}
-                    className="group flex items-center gap-3 px-3 py-2.5 transition-colors duration-200 hover:bg-[rgba(184,146,63,0.14)]"
-                    style={{ borderTop: i > 0 ? '1px solid rgba(224,191,120,0.16)' : undefined }}
-                  >
-                    <div
-                      className="shrink-0 w-11 h-11 rounded-md bg-cover bg-center"
-                      style={{ backgroundImage: `url(${IMAGES[s.id] ?? ''})` }}
-                    />
-                    <span className="flex-1 text-sm font-light" style={{ color: 'var(--ivory)' }}>
-                      {s.label}
-                    </span>
+            {/* Right — services, right in the hero: each row IS the photograph */}
+            <FadeIn delay={1000} duration={1000} className="mt-8 lg:mt-0 flex flex-col gap-2">
+              {SERVICES.map((s, i) => (
+                <Link
+                  key={s.id}
+                  to={`/services/${s.id}`}
+                  className="group relative flex items-center overflow-hidden rounded-lg"
+                  style={{ height: '64px' }}
+                >
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                    style={{ backgroundImage: `url(${IMAGES[s.id] ?? ''})` }}
+                  />
+                  <div
+                    className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-80"
+                    style={{ background: 'linear-gradient(90deg, rgba(10,9,8,0.92) 30%, rgba(10,9,8,0.55) 70%, rgba(10,9,8,0.35) 100%)' }}
+                  />
+                  <div className="relative z-10 flex items-center justify-between w-full px-5">
+                    <div className="flex items-baseline gap-3">
+                      <span className="mono text-[10px]" style={{ color: 'var(--gold-light)' }}>0{i + 1}</span>
+                      <span className="font-serif text-lg" style={{ color: 'var(--ivory)' }}>{s.label}</span>
+                    </div>
                     <span
                       className="text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-200"
                       style={{ color: 'var(--gold-light)' }}
                     >
                       →
                     </span>
-                  </Link>
-                ))}
-              </div>
+                  </div>
+                </Link>
+              ))}
             </FadeIn>
           </div>
         </div>
