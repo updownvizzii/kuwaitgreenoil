@@ -86,7 +86,7 @@ export function Hero() {
                   key={s.id}
                   to={`/services/${s.id}`}
                   className="group relative flex items-center overflow-hidden rounded-lg"
-                  style={{ height: '64px' }}
+                  style={{ minHeight: '64px' }}
                 >
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
@@ -96,13 +96,13 @@ export function Hero() {
                     className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-80"
                     style={{ background: 'linear-gradient(90deg, rgba(10,9,8,0.92) 30%, rgba(10,9,8,0.55) 70%, rgba(10,9,8,0.35) 100%)' }}
                   />
-                  <div className="relative z-10 flex items-center justify-between w-full px-5">
-                    <div className="flex items-baseline gap-3">
-                      <span className="mono text-[10px]" style={{ color: 'var(--gold-light)' }}>0{i + 1}</span>
-                      <span className="font-serif text-lg" style={{ color: 'var(--ivory)' }}>{s.label}</span>
+                  <div className="relative z-10 flex items-center justify-between w-full px-5 py-3 gap-3">
+                    <div className="flex items-baseline gap-3 min-w-0">
+                      <span className="mono text-[10px] shrink-0" style={{ color: 'var(--gold-light)' }}>0{i + 1}</span>
+                      <span className="font-serif text-lg leading-snug" style={{ color: 'var(--ivory)' }}>{s.label}</span>
                     </div>
                     <span
-                      className="text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-200"
+                      className="text-sm shrink-0 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-200"
                       style={{ color: 'var(--gold-light)' }}
                     >
                       →

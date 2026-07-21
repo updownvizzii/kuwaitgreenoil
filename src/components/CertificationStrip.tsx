@@ -69,8 +69,8 @@ export function CertificationStrip() {
             {CERTIFICATIONS.map((c, i) => (
               <div
                 key={c.id}
-                className="relative shrink-0 overflow-hidden rounded-2xl mr-4 md:mr-6"
-                style={{ width: 'min(78vw, 400px)', height: '440px', border: '1px solid rgba(224,191,120,0.16)' }}
+                className="relative shrink-0 overflow-hidden rounded-2xl mr-4 md:mr-6 flex flex-col"
+                style={{ width: 'min(78vw, 400px)', minHeight: '440px', border: '1px solid rgba(224,191,120,0.16)' }}
               >
                 <div
                   className="absolute inset-0"
@@ -82,7 +82,7 @@ export function CertificationStrip() {
                   }}
                 />
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(0deg, rgba(10,9,8,0.94) 10%, rgba(10,9,8,0.25) 60%, rgba(10,9,8,0.45) 100%)' }} />
-                <div className="relative z-10 h-full flex flex-col justify-end p-6 md:p-7">
+                <div className="relative z-10 mt-auto p-6 md:p-7">
                   <span className="mono text-[10px] tracking-[0.16em]" style={{ color: 'rgba(250,248,241,0.5)' }}>{c.year}</span>
                   <h3 className="font-serif text-2xl md:text-3xl font-medium mt-2 mb-3 text-grad-gold">{c.name}</h3>
                   <p className="text-xs md:text-sm font-light leading-relaxed" style={{ color: 'var(--ivory-soft)' }}>{c.body}</p>
