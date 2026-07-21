@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 
 interface AnimatedHeadingProps {
   text: string
@@ -37,15 +37,19 @@ export function AnimatedHeading({
   }, [])
 
   return (
-    <h1 className={className} style={{ letterSpacing: '-0.04em' }}>
-      {lines.map((line, lineIndex) => (
-        <span key={lineIndex} style={{ display: 'block' }}>
-          {Array.from(line).map((char, charIndex) => {
+    <h1 className={className} style={{ letterSpacing: '0.01em' }}>
+      {lines.map((line, lineIndex) => {
+        const words = line.split(' ')
+        let charIndex = -1
+
+        const renderWord = (word: string, wordIndex: number) => {
+          const spans = Array.from(word).map((char, i) => {
+            charIndex += 1
             const key = `${lineIndex}-${charIndex}`
             const show = revealed.has(key)
             return (
               <span
-                key={key}
+                key={i}
                 style={{
                   display: 'inline-block',
                   opacity: show ? 1 : 0,
@@ -53,12 +57,28 @@ export function AnimatedHeading({
                   transition: 'opacity 500ms, transform 500ms',
                 }}
               >
-                {char === ' ' ? ' ' : char}
+                {char}
               </span>
             )
-          })}
-        </span>
-      ))}
+          })
+          if (wordIndex < words.length - 1) charIndex += 1 // account for the separating space
+          return (
+            <Fragment key={wordIndex}>
+              {/* Grouped so the browser can only wrap between words, never mid-word. */}
+              <span style={{ display: 'inline-block', whiteSpace: 'nowrap' }}>{spans}</span>
+              {/* Space rendered OUTSIDE the inline-block — inside it, a trailing space
+                  collapses to zero width (inline-block trims leading/trailing whitespace). */}
+              {wordIndex < words.length - 1 ? ' ' : ''}
+            </Fragment>
+          )
+        }
+
+        return (
+          <span key={lineIndex} style={{ display: 'block' }}>
+            {words.map((word, wordIndex) => renderWord(word, wordIndex))}
+          </span>
+        )
+      })}
     </h1>
   )
 }

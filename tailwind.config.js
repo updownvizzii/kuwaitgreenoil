@@ -4,8 +4,17 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
+        serif: ['"Libre Caslon Display"', 'serif'],
+        display: ['"Libre Caslon Display"', 'serif'],
+      },
+      colors: {
+        gold: {
+          DEFAULT: '#b8923f',
+          light: '#e0bf78',
+          deep: '#8b6f33',
+        },
       },
     },
   },

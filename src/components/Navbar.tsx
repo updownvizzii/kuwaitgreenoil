@@ -41,10 +41,14 @@ export function Navbar() {
           })}
         </nav>
 
-        {/* CTA — white pill over the hero, dark pill (green sweep) otherwise */}
+        {/* CTA — ivory pill over the hero, dark pill (gold sweep) otherwise */}
         <Link
           to="/contact"
-          className={overHero ? `bg-white text-black hover:bg-gray-100 ${ctaBase}` : `btn-pill ${ctaBase}`}
+          className={
+            overHero
+              ? `bg-[var(--ivory)] text-[var(--ink)] hover:bg-[var(--gold-light)] ${ctaBase}`
+              : `btn-pill ${ctaBase}`
+          }
         >
           Get in touch
         </Link>

@@ -4,18 +4,18 @@ import { CTA } from '../lib/content'
 
 export function CtaBand() {
   return (
-    <section className="relative px-6 md:px-12 lg:px-16 py-28 md:py-40 border-t border-black/10 overflow-hidden">
-      {/* soft green glow */}
+    <section className="relative px-6 md:px-12 lg:px-16 py-28 md:py-40 border-t border-[var(--line)] overflow-hidden">
+      {/* soft gold glow */}
       <div
         className="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(circle, rgba(14,16,12,0.05) 0%, transparent 60%)' }}
+        style={{ background: 'radial-gradient(circle, rgba(184,146,63,0.10) 0%, transparent 60%)' }}
       />
       <div className="relative max-w-4xl">
         <Reveal>
           <p className="kicker mb-6">Work with us</p>
         </Reveal>
         <Reveal delay={80}>
-          <h2 className="text-grad text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-[1.04] mb-8">
+          <h2 className="text-grad font-serif text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.04] mb-8">
             {CTA.heading}
           </h2>
         </Reveal>
@@ -34,7 +34,7 @@ export function CtaBand() {
             </Link>
             <Link
               to="/certifications"
-              className="border border-black/15 text-[var(--ink)] px-8 py-3.5 rounded-lg font-medium hover:bg-[var(--ink)] hover:text-white transition-all duration-200"
+              className="border border-[var(--line)] text-[var(--ink)] px-8 py-3.5 rounded-lg font-medium hover:bg-[var(--ink)] hover:text-[var(--ivory)] transition-all duration-200"
             >
               {CTA.secondary}
             </Link>
