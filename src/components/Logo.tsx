@@ -1,7 +1,10 @@
 /**
- * Real KGEC brand logo (transparent PNG). The artwork has dark/black lettering,
- * so on dark backgrounds pass `onDark` to use the white-lettered variant.
- * Size via the `className` height utility (e.g. "h-12").
+ * KGEC brand mark. The source artwork has a green signal-arc icon baked into
+ * the raster PNG — per brand direction, no green should render anywhere on
+ * the site. Rather than swap PNG variants (which still carry the green icon),
+ * we force a true monochrome silhouette via CSS filter: brightness(0) crushes
+ * every opaque pixel to black regardless of its original color, and invert(1)
+ * flips that to white for dark backgrounds.
  */
 export function Logo({
   onDark = false,
@@ -12,9 +15,10 @@ export function Logo({
 }) {
   return (
     <img
-      src={onDark ? '/kgec-full-logo-white.png' : '/kgec-full-logo.png'}
+      src="/kgec-full-logo.png"
       alt="KGEC — Kuwait Green Energy Co."
       className={`w-auto object-contain ${className}`}
+      style={{ filter: onDark ? 'brightness(0) invert(1)' : 'brightness(0)' }}
     />
   )
 }
