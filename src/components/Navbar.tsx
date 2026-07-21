@@ -8,25 +8,28 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    // Reference behaviour: transparent (merged with hero) until scrollY > 40, then frosted + border.
     const onScroll = () => setScrolled(window.scrollY > 40)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // White treatment only while transparent over the dark home hero.
+  // The nav is always dark. Only exception: merged transparent over the
+  // home page's dark hero video, before the user scrolls — everywhere else
+  // (any interior page, or the home page once scrolled) gets the solid
+  // dark frosted bar.
   const overHero = (path === '/' || path === '') && !scrolled
+  const solidDark = !overHero
 
   const ctaBase =
     'shrink-0 rounded-full font-mono uppercase tracking-[0.1em] text-[0.8rem] font-medium px-7 py-3 transition-colors duration-200'
 
   return (
-    <header className={`site-nav ${scrolled ? 'is-scrolled' : ''} ${overHero ? 'over-hero' : ''}`}>
+    <header className={`site-nav ${solidDark ? 'is-scrolled' : ''} ${overHero ? 'over-hero' : ''}`}>
       <div className="w-full px-6 md:px-12 lg:px-16 flex items-center justify-between gap-8">
-        {/* Logo — white while merged over the hero, dark otherwise */}
+        {/* Logo — always the white silhouette; the nav is never light */}
         <Link to="/" className="flex items-center shrink-0" aria-label="KGEC home">
-          <Logo onDark={overHero} className="h-14 md:h-16" />
+          <Logo onDark className="h-14 md:h-16" />
         </Link>
 
         {/* Center links — mono uppercase, underline wipes through on hover */}
@@ -41,14 +44,11 @@ export function Navbar() {
           })}
         </nav>
 
-        {/* CTA — ivory pill over the hero, dark pill (gold sweep) otherwise */}
+        {/* CTA — solid gold, always high-contrast against the dark bar */}
         <Link
           to="/contact"
-          className={
-            overHero
-              ? `bg-[var(--ivory)] text-[var(--ink)] hover:bg-[var(--gold-light)] ${ctaBase}`
-              : `btn-pill ${ctaBase}`
-          }
+          className={`${ctaBase} hover:bg-[var(--gold-light)]`}
+          style={{ background: 'var(--gold)', color: 'var(--ink)' }}
         >
           Get in touch
         </Link>

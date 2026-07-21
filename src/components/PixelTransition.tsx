@@ -33,7 +33,7 @@ export function PixelTransition({ phase }: { phase: 'idle' | 'cover' | 'reveal' 
             <div
               key={i}
               style={{
-                background: 'var(--bg)',
+                background: 'var(--ink)',
                 opacity: covering ? 1 : 0,
                 transition: `opacity ${dur}ms ease`,
                 transitionDelay: `${delay}ms`,
