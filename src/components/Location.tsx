@@ -13,7 +13,7 @@ export function Location() {
           <p className="kicker mb-6">Find us</p>
         </Reveal>
         <Reveal delay={60}>
-          <h2 className="text-grad font-serif text-3xl md:text-5xl font-normal leading-[1.05] mb-8" style={{ letterSpacing: '0.005em' }}>
+          <h2 className="text-grad font-serif text-3xl md:text-5xl font-normal leading-[1.15] mb-8" style={{ letterSpacing: '0.005em' }}>
             Based in Kuwait,<br />built for the region.
           </h2>
         </Reveal>

@@ -41,7 +41,7 @@ export function ServiceStack() {
     <section className="relative z-10 border-t border-[var(--line)]">
       <div className="px-6 md:px-12 lg:px-16 pt-24 md:pt-32 pb-14 md:pb-16" style={{ background: 'var(--bg)' }}>
         <p className="kicker mb-5">What we do</p>
-        <h2 className="text-grad font-serif text-3xl md:text-5xl font-normal leading-[1.03] max-w-3xl" style={{ letterSpacing: '0.005em' }}>
+        <h2 className="text-grad font-serif text-3xl md:text-5xl font-normal leading-[1.15] max-w-3xl" style={{ letterSpacing: '0.005em' }}>
           Five specialisms. One accountable team.
         </h2>
       </div>
@@ -78,7 +78,7 @@ export function ServiceStack() {
                   <p className="mono text-[10px] uppercase tracking-[0.22em] mb-4" style={{ color: 'var(--gold-light)' }}>
                     {s.subtitle}
                   </p>
-                  <h3 className="font-serif text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.02] mb-6 text-[var(--ivory)]">
+                  <h3 className="font-serif text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.15] mb-6 text-[var(--ivory)]">
                     {s.label}
                   </h3>
                   <p className="text-sm md:text-base font-light leading-relaxed max-w-xl mb-8" style={{ color: 'var(--ivory-soft)' }}>

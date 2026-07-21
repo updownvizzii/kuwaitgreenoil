@@ -23,7 +23,7 @@ export function PageHeader({
         </Reveal>
         <Reveal delay={80}>
           <h1
-            className="text-grad font-serif uppercase text-4xl md:text-6xl lg:text-[4.5rem] font-normal leading-[1.05] whitespace-pre-line max-w-4xl"
+            className="text-grad font-serif uppercase text-4xl md:text-6xl lg:text-[4.5rem] font-normal leading-[1.15] whitespace-pre-line max-w-4xl"
             style={{ letterSpacing: '0.01em' }}
           >
             {title}

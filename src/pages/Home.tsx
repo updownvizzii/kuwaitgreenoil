@@ -22,7 +22,7 @@ export function Home() {
           <div>
             <Reveal>
               <h2
-                className="text-grad font-serif text-3xl md:text-5xl lg:text-[3.5rem] font-medium leading-[1.04] mb-10"
+                className="text-grad font-serif text-3xl md:text-5xl lg:text-[3.5rem] font-medium leading-[1.15] mb-10"
                 style={{ letterSpacing: '0.005em' }}
               >
                 {MANIFESTO.heading}

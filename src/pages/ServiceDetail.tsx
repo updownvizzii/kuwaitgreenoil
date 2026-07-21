@@ -48,7 +48,7 @@ export function ServiceDetail({ id }: { id: string }) {
         <div className="relative">
           <Reveal><p className="mono text-[10px] uppercase tracking-[0.22em]" style={{ color: 'var(--gold-light)' }}>Service 0{idx + 1} / 05</p></Reveal>
           <Reveal delay={80}>
-            <h1 className="text-grad-gold font-serif text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[0.98] max-w-4xl mt-6" style={{ letterSpacing: '0.005em' }}>
+            <h1 className="text-grad-gold font-serif text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.15] max-w-4xl mt-6" style={{ letterSpacing: '0.005em' }}>
               {service.label}
             </h1>
           </Reveal>

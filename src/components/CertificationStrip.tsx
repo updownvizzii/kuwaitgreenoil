@@ -60,7 +60,7 @@ export function CertificationStrip() {
             <p className="mono text-[10px] uppercase tracking-[0.22em] mb-5" style={{ color: 'var(--gold-light)' }}>
               Quality &amp; standards
             </p>
-            <h2 className="text-grad-gold text-3xl md:text-5xl font-serif font-medium leading-[1.03] max-w-2xl" style={{ letterSpacing: '0.005em' }}>
+            <h2 className="text-grad-gold text-3xl md:text-5xl font-serif font-medium leading-[1.15] max-w-2xl" style={{ letterSpacing: '0.005em' }}>
               Five active certifications. Zero compromise.
             </h2>
           </div>

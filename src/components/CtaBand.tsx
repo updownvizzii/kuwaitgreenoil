@@ -15,7 +15,7 @@ export function CtaBand() {
           <p className="kicker mb-6">Work with us</p>
         </Reveal>
         <Reveal delay={80}>
-          <h2 className="text-grad font-serif text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.04] mb-8">
+          <h2 className="text-grad font-serif text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.15] mb-8">
             {CTA.heading}
           </h2>
         </Reveal>
