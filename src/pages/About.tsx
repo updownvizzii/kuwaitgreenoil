@@ -3,6 +3,7 @@ import { Reveal } from '../components/Reveal'
 import { StatCounter } from '../components/StatCounter'
 import { CtaBand } from '../components/CtaBand'
 import { ImageBand } from '../components/ImageBand'
+import { FounderNote } from '../components/FounderNote'
 import { Location } from '../components/Location'
 import { MANIFESTO, MILESTONES, WHY_US, PROOF_STATS } from '../lib/content'
 
@@ -48,6 +49,8 @@ export function About() {
           ))}
         </div>
       </section>
+
+      <FounderNote />
 
       <ImageBand
         image="/kgec-facility-sunset.jpg"

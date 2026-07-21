@@ -154,6 +154,14 @@ export const SERVICES: Service[] = [
   },
 ];
 
+// ─── FOUNDER ─────────────────────────────────────────────────────────────────
+export const FOUNDER = {
+  name: 'Anwar Kadri',
+  title: 'Co-Founder',
+  quote:
+    'We started KGEC because Kuwait\'s operators were tired of chasing five different vendors for one job. Six years later, we\'re still the ones who pick up the phone, still the ones who stand behind the paperwork. That\'s not going to change.',
+};
+
 // ─── WHY US ──────────────────────────────────────────────────────────────────
 export const WHY_US = [
   {
