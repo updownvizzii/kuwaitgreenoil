@@ -2,7 +2,15 @@ import { useEffect, useRef } from 'react'
 import { AnimatedHeading } from './AnimatedHeading'
 import { FadeIn } from './FadeIn'
 import { Link } from '../lib/router'
-import { HERO } from '../lib/content'
+import { HERO, SERVICES } from '../lib/content'
+
+const IMAGES: Record<string, string> = {
+  oilgas: '/kgec-svc-machining.jpg',
+  fabrication: '/kgec-svc-fabrication.jpg',
+  rotating: '/kgec-svc-rotating.jpg',
+  valves: '/kgec-svc-valves.jpg',
+  testing: '/kgec-svc-testing.jpg',
+}
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -71,16 +79,31 @@ export function Hero() {
               </FadeIn>
             </div>
 
-            {/* Right — tag */}
-            <FadeIn
-              delay={1400}
-              duration={1000}
-              className="flex items-end justify-start lg:justify-end mt-8 lg:mt-0"
-            >
-              <div className="liquid-glass border px-6 py-3 rounded-xl" style={{ borderColor: 'rgba(224,191,120,0.35)' }}>
-                <span className="mono text-[11px] uppercase tracking-[0.22em]" style={{ color: 'var(--gold-light)' }}>
-                  {HERO.tag}
-                </span>
+            {/* Right — services, right in the hero */}
+            <FadeIn delay={1000} duration={1000} className="mt-8 lg:mt-0">
+              <div className="liquid-glass border rounded-xl overflow-hidden" style={{ borderColor: 'rgba(224,191,120,0.35)' }}>
+                {SERVICES.map((s, i) => (
+                  <Link
+                    key={s.id}
+                    to={`/services/${s.id}`}
+                    className="group flex items-center gap-3 px-3 py-2.5 transition-colors duration-200 hover:bg-[rgba(184,146,63,0.14)]"
+                    style={{ borderTop: i > 0 ? '1px solid rgba(224,191,120,0.16)' : undefined }}
+                  >
+                    <div
+                      className="shrink-0 w-11 h-11 rounded-md bg-cover bg-center"
+                      style={{ backgroundImage: `url(${IMAGES[s.id] ?? ''})` }}
+                    />
+                    <span className="flex-1 text-sm font-light" style={{ color: 'var(--ivory)' }}>
+                      {s.label}
+                    </span>
+                    <span
+                      className="text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-200"
+                      style={{ color: 'var(--gold-light)' }}
+                    >
+                      →
+                    </span>
+                  </Link>
+                ))}
               </div>
             </FadeIn>
           </div>

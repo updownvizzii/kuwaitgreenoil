@@ -14,7 +14,6 @@ export const SITE = {
 export const HERO = {
   heading: 'Precision engineering\nfor Oil, Gas & Power.',
   sub: 'API Q1 and ISO 9001:2015 certified specialists, engineering precision for Kuwait\'s most demanding operators.',
-  tag: 'Oil. Gas. Power.',
 };
 
 // ─── MANIFESTO ───────────────────────────────────────────────────────────────

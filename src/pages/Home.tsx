@@ -3,7 +3,6 @@ import { Reveal } from '../components/Reveal'
 import { StatCounter } from '../components/StatCounter'
 import { CtaBand } from '../components/CtaBand'
 import { Milestones } from '../components/Milestones'
-import { ServicesGlance } from '../components/ServicesGlance'
 import { ServiceStack } from '../components/ServiceStack'
 import { CertificationStrip } from '../components/CertificationStrip'
 import { Location } from '../components/Location'
@@ -13,8 +12,6 @@ export function Home() {
   return (
     <>
       <Hero />
-
-      <ServicesGlance />
 
       {/* ── Manifesto — editorial, text-led ── */}
       <section className="relative z-10 px-6 md:px-12 lg:px-16 py-28 md:py-40 border-t border-[var(--line)]">
