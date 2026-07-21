@@ -24,7 +24,8 @@ export function Hero() {
 
   return (
     <section className="relative w-full bg-black h-screen overflow-hidden flex flex-col">
-      {/* Calm autoplay background — no cursor/scroll interaction */}
+      {/* Calm autoplay background — no cursor/scroll interaction. Graded warm gold/black
+          instead of the raw teal-orange footage, to match the site's royal palette. */}
       <video
         ref={videoRef}
         src="/oil-rig-clean.mp4"
@@ -34,11 +35,12 @@ export function Hero() {
         playsInline
         preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
+        style={{ filter: 'sepia(0.45) saturate(1.3) hue-rotate(-8deg) contrast(1.08) brightness(0.9)' }}
       />
       {/* Dark panel over the footage for text legibility */}
       <div
         className="absolute inset-0"
-        style={{ background: 'linear-gradient(180deg, rgba(10,9,8,0.55) 0%, rgba(10,9,8,0.35) 45%, rgba(10,9,8,0.75) 100%)' }}
+        style={{ background: 'linear-gradient(180deg, rgba(10,9,8,0.6) 0%, rgba(10,9,8,0.4) 45%, rgba(10,9,8,0.82) 100%)' }}
       />
 
       <div className="relative z-10 flex flex-col h-full px-6 md:px-12 lg:px-16">

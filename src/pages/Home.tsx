@@ -13,8 +13,8 @@ export function Home() {
     <>
       <Hero />
 
-      {/* ── Manifesto — editorial, text-led ── */}
-      <section className="relative z-10 px-6 md:px-12 lg:px-16 py-28 md:py-40 border-t border-[var(--line)]">
+      {/* ── Manifesto — editorial, text-led, cream breather after the dark hero ── */}
+      <section className="relative z-10 px-6 md:px-12 lg:px-16 py-28 md:py-40" style={{ background: 'var(--bg)' }}>
         <div className="grid md:grid-cols-[280px_1fr] gap-10 md:gap-20">
           <Reveal>
             <p className="kicker md:pt-3">{MANIFESTO.eyebrow}</p>
@@ -41,8 +41,8 @@ export function Home() {
 
       <ServiceStack />
 
-      {/* ── Stats — refined numeric band ── */}
-      <section className="relative z-10 px-6 md:px-12 lg:px-16 py-24 md:py-32 border-t border-[var(--line)]">
+      {/* ── Stats — cream breather, numerals pop against the dark sections either side ── */}
+      <section className="relative z-10 px-6 md:px-12 lg:px-16 py-24 md:py-32" style={{ background: 'var(--bg)' }}>
         <Reveal>
           <p className="kicker mb-12 md:mb-16">By the numbers</p>
         </Reveal>
@@ -65,9 +65,9 @@ export function Home() {
 
       <CertificationStrip />
 
-      <CtaBand />
-
       <Location />
+
+      <CtaBand />
     </>
   )
 }

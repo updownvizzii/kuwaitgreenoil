@@ -38,7 +38,7 @@ export function ServiceStack() {
   }, [])
 
   return (
-    <section className="relative z-10 border-t border-[var(--line)]">
+    <section className="relative z-10">
       <div className="px-6 md:px-12 lg:px-16 pt-24 md:pt-32 pb-14 md:pb-16" style={{ background: 'var(--bg)' }}>
         <p className="kicker mb-5">What we do</p>
         <h2 className="text-grad font-serif text-3xl md:text-5xl font-normal leading-[1.15] max-w-3xl" style={{ letterSpacing: '0.005em' }}>

@@ -7,7 +7,7 @@ const MAPS_SRC =
 /** Real business location, embedded straight from the company's registered Google listing. */
 export function Location() {
   return (
-    <section className="relative z-10 border-t border-[var(--line)] grid lg:grid-cols-2">
+    <section className="relative z-10 grid lg:grid-cols-2">
       <div className="px-6 md:px-12 lg:px-16 py-20 md:py-28 flex flex-col justify-center" style={{ background: 'var(--bg)' }}>
         <Reveal>
           <p className="kicker mb-6">Find us</p>

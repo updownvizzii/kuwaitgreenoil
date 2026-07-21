@@ -53,7 +53,7 @@ export function CertificationStrip() {
   }, [])
 
   return (
-    <section className="relative z-10 border-t border-[var(--line)] h-scroll-outer" style={{ background: 'var(--surface-dark)' }} ref={outerRef}>
+    <section className="relative z-10 h-scroll-outer" style={{ background: 'var(--ink)' }} ref={outerRef}>
       <div className="h-scroll-pin">
         <div className="w-full">
           <div className="px-6 md:px-12 lg:px-16 pt-24 md:pt-0 pb-10 lg:pb-14">
